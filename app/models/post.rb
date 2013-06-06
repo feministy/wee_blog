@@ -4,6 +4,7 @@ class Post < ActiveRecord::Base
   has_many :tags, :through => :tagclouds
   validates :content, :presence => true
   validates :title, :presence => true
+  validates :user_id, :presence => true
 
   before_save :tag_it
 
