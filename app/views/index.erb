@@ -1,5 +1,7 @@
 <% if logged_in? %>
   <%= erb :user_profile, :layout => false %>
 <% else %>
-  <%= erb :user_new, :layout => false %>
+  <h2>Welcome to weeblog!</h2>
+
+  <p>You can see all posts, but if you want to share your haikus you need to <a href="/user/new">create an account</a> or <a href="/login">login</a>.</p>
 <% end %>
