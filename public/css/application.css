@@ -18,6 +18,12 @@ h2 {
   color: #555555;
 }
 
+h3 {
+  font-weight: 700;
+  font-size: 1.25em;
+  color: #555555;
+}
+
 p {
   font-family: 'Bitter', Georgia;
   font-size: 1em;
@@ -30,6 +36,10 @@ a {
   font-weight: 700;
   text-decoration: none;
   color: #333333;
+}
+
+a:hover {
+  color: #FF0099;
 }
 
 
@@ -72,10 +82,15 @@ nav {
 
 .copy {
   background: #FF0099;
-  color: #ffffff;
-  padding: 10px;
-  margin: 0;
   width: 100%;
+  min-height: 40px;
+  padding-top: 20px;
+  margin: 0;
+}
+
+.copytext {
+  color: #ffffff;
+  padding-left: 55px;
   font-family: 'Source Sans Pro';
   font-size: 0.8em;
 }
