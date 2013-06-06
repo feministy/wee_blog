@@ -80,6 +80,11 @@ nav {
   margin-bottom: 40px;
 }
 
+.edit {
+  text-align: right;
+  margin-bottom: -42px;
+}
+
 .copy {
   background: #FF0099;
   width: 100%;
