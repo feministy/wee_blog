@@ -28,7 +28,7 @@ post '/login' do
   @user = User.authenticate(email, password)
   if @user
     session[:user_id] = @user.id
-    redirect '/user/' + id
+    redirect '/user/' + @user.id.to_s
   else 
     redirect '/'
   end 
@@ -38,7 +38,7 @@ post '/user/new' do
   @user = User.new(params[:new_user])
   if @user.save
     session[:user_id] = @user.id
-    redirect '/user/' + id
+    redirect '/user/' + @user.id.to_s
   else
     redirect '/'
   end
