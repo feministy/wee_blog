@@ -1,16 +1,5 @@
-<% if @posts %>
-  <% @posts.reverse.each do |post| %>
-    <h2><a href="/posts/<%=post.id%>"><%= post.title %></a></h2>
-  
-    <p><%= post.content %></p>
-    <p class="edit"><a href="/posts/<%=post.id%>/edit"><i class="icon-edit"></i></a> <a href="/posts/<%=post.id%>/delete"><i class="icon-trash"></i></a></p>
-    
-    <p class="tags">tags:
-      <% post.tags.all.each do |tag| %>
-        <a href="/posts/tag/<%=tag.id%>"><%= tag.name %></a>
-      <% end %>
-    </p>
-  <% end %>
+<% if logged_in? %>
+  <%= erb :user_profile, :layout => false %>
 <% else %>
-  <%= erb :new, :layout => false %>
+  <%= erb :user_new, :layout => false %>
 <% end %>
