@@ -1,3 +1,4 @@
+<% if @current_user == @post.user_id %>
 <h2>Edit post</h2>
 <p>Fix your typos.</p>
 <form action="/posts/<%=@post.id%>/edit" method="post">
@@ -27,3 +28,8 @@
 
 <input type="hidden" value="post[<%=@post.id%>]">
 </form>
+
+<% else %>
+<h2>Whoops!</h2>
+<p>You can only edit your own post.</p>
+<% end %>

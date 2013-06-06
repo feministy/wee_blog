@@ -31,7 +31,7 @@ end
 post '/posts/new' do
   @post = Post.new(params[:post])
   if @post.save
-    redirect to '/'
+    redirect to '/posts/all'
   else
     erb :error
   end 

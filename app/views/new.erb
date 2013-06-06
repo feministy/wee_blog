@@ -1,3 +1,4 @@
+<% if logged_in? %>
 <h2>New post</h2>
 <p>Enlighten us with your clever words.</p>
 <form action="/posts/new" method="post">
@@ -23,6 +24,13 @@
 
 <input type="text" id="tags" name="post[tag_names]" placeholder="Tag me!" size="70">
 
+<input type="hidden" name="post[user_id]" value="<%=@current_user.id%>">
+
 <p><input type="submit" value="Post"></p>
 
 </form>
+<% else %>
+<h2>Whoops!</h2>
+<p>You must login before you can create a post.</p>
+<%= erb :login_form, :layout => false %>
+<% end %>
