@@ -1,8 +1,6 @@
 <h2>Edit post</h2>
 <p>Fix your typos.</p>
 <form action="/posts/<%=@post.id%>/edit" method="post">
-<%= erb :form, :layout => false %>
+<%= erb :post_form, :layout => false %>
 <input type="hidden" value="post[<%=@post.id%>]">
 </form>
-
-<p>&nbsp;</p>

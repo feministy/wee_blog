@@ -14,11 +14,22 @@
 </head>
 <body>
   <nav>
+    <% if logged_in? %>
+    <ul class="nav">
+      <li class="first">Welcome, <%= @current_user.name %></li>
+      <li class="nav"><a href="/">Home</a></li>
+      <li class="nav"><a href="/logout">Logout</a></li>
+    </ul>
+    <% else %>
     <ul class="nav">
       <li class="first">Weeblog</li>
-      <li class="nav"><a href="/">All posts</a></li>
-      <li class="nav"><a href="/posts/new">New post</a></li>
+      <li class="nav"><a href="/">Home</a></li>
+      <li class="nav"><a href="/posts/all">All posts</a></li>
+      <li class="nav"><a href="/user/all">All users</a></li>
+      <li class="nav"><a href="/login">Login</a></li>
+      <li class="nav"><a href="/user/new">Sign up</a></li>
     </ul>
+    <% end %>
   </nav>
 
   <div class="container">
