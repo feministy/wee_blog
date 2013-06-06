@@ -1,21 +1,23 @@
-<form action="/post/new" method="post">
-  <label for="title">
-    <h3>Title</h3>
-    <p>Keep it short, keep it simple</p></label>
-    <input type="text" id="title" name="post[title]" placeholder="My awesome post" size="70" max="255" autofocus>
+<label for="title">
+  <h3>Title</h3>
+  <p>Keep it short, keep it simple.</p>
+</label>
   
-  <label for="content">
-    <h3>Content</h3>
-    <p>Separate paragraphs with two line breaks (<code>&lt;br&gt;&lt;br&gt;</code>).</p></label>
-    <textarea id="content" name="post[content]" rows="6" cols="70" placeholder="Pop-up dolor Williamsburg, put a bird on it laboris pork belly try-hard eu. iPhone letterpress selvage placeat, chambray blog semiotics. Kale chips assumenda do, banh mi eu mollit flexitarian literally banjo four loko."></textarea>
+<input type="text" id="title" name="post[title]" placeholder="My awesome post" size="70" max="255" autofocus>
 
-  <label for="tags">
-    <h3>Tags</h3>
-    <p>Separate tags with commas, like so: <code>tag1, tag2, tag3</code>.</p>
-    <input type="text" id="tags" name="post[tags]" placeholder="Tag me!" size="70">
-  </label>
+<label for="content">
+  <h3>Content</h3>
+  <p>Separate paragraphs with two line breaks (<code>&lt;br&gt;&lt;br&gt;</code>).</p>
+</label>
 
-  <p><input type="submit" value="Post"></p>
-</form>
+<textarea id="content" name="post[content]" rows="6" cols="70" placeholder="Pop-up dolor Williamsburg, put a bird on it laboris pork belly try-hard . iPhone letterpress selvage placeat, chambray blog semiotics. Kale chipassumenda do, banh mi eu mollit flexitarian literally banjo four loko.">
+</textarea>
 
-<p>&nbsp;</p>
+<label for="tags">
+  <h3>Tags</h3>
+  <p>Separate tags with commas, like so: <code>tag1, tag2, tag3</code>.</p>
+</label>
+
+<input type="text" id="tags" name="post[tag_names]" placeholder="Tag me!" size="70">
+
+<p><input type="submit" value="Post"></p>
