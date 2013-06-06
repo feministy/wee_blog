@@ -1,6 +1,29 @@
 <h2>Edit post</h2>
 <p>Fix your typos.</p>
 <form action="/posts/<%=@post.id%>/edit" method="post">
-<%= erb :post_form, :layout => false %>
+<label for="title">
+  <h3>Title</h3>
+  <p>Keep it short, keep it simple.</p>
+</label>
+  
+<input type="text" id="title" name="post[title]" value="<%=@title%>" size="70" max="255" autofocus>
+
+<label for="content">
+  <h3>Content</h3>
+  <p>Separate paragraphs with two line breaks (<code>&lt;br&gt;&lt;br&gt;</code>).</p>
+</label>
+
+<textarea id="content" name="post[content]" rows="6" cols="70"><%=@content%>
+</textarea>
+
+<label for="tags">
+  <h3>Tags</h3>
+  <p>Separate tags with commas, like so: <code>tag1, tag2, tag3</code>.</p>
+</label>
+
+<input type="text" id="tags" name="post[tag_names]" size="70" value="<%=pretty_form_tags%>">
+
+<p><input type="submit" value="Post"></p>
+
 <input type="hidden" value="post[<%=@post.id%>]">
 </form>

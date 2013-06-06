@@ -10,6 +10,9 @@ end
 get '/posts/:id/edit' do
   id = params[:id]
   @post = Post.find(id)
+  @title = @post.title
+  @content = @post.content
+  @tags = @post.tags
   erb :edit
 end 
 
