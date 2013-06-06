@@ -1,9 +1,32 @@
+body {
+  font-family: 'Source Sans Pro', Arial;
+  font-size: 1em;
+  color: #333333;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 4em;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 2em;
+}
+
+p {
+  font-family: 'Bitter', Georgia;
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-bottom: 10px;
+}
+
+a {
+  font-weight: 700;
+}
+
 .container {
   margin: 20px auto;
   width: 600px;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
-}
-th {
-  text-align: left;
 }
