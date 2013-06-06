@@ -1,9 +1,8 @@
 <h2>All Weeblog users</h3>
 
 <% @all_users.each do |user| %>  
-    <ul>
-    <li class="first"><%= user.name %></li>
-    <li><%=user.posts.count%> posts</li>
-    <li><a href="/user/<%=user.id%>">View profile</a></li>
-    </ul>
+    <p class="userlist"><%= user.name %> <i class="icon-double-angle-right"></i>
+    <%=user.posts.count%> posts <i class="icon-angle-right"></i>
+    <a href="/user/<%=user.id%>">View profile</a>
+    </p>
 <% end %>

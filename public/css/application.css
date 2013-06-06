@@ -80,6 +80,10 @@ nav {
   margin-bottom: 40px;
 }
 
+.userlist {
+  border-bottom: 1px dotted #CCCCCC;
+}
+
 .edit {
   text-align: right;
   margin-bottom: -42px;

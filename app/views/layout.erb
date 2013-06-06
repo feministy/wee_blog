@@ -16,8 +16,10 @@
   <nav>
     <% if logged_in? %>
     <ul class="nav">
-      <li class="first">Welcome, <%= @current_user.name %></li>
+      <li class="first">Welcome, <a href="/user/<%= @current_user.id %>"><%= @current_user.name %></a></li>
       <li class="nav"><a href="/">Home</a></li>
+      <li class="nav"><a href="/posts/new">New post</a></li>
+      <li class="nav"><a href="/posts/all">All posts</a></li>
       <li class="nav"><a href="/logout">Logout</a></li>
     </ul>
     <% else %>
