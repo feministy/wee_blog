@@ -1,7 +1,13 @@
 <% if @posts %>
   <% @posts.each do |post| %>
-    <h2><%= post.title %></h2>
+    <h2><a href="/posts/<%=post.id%>"><%= post.title %></a></h2>
+  
     <p><%= post.content %></p>
-    <span class="tags">Tags:</span> <%= post.tags.all %></span> 
+    
+    <p class="tags">tags:
+      <% post.tags.all.each do |tag| %>
+        <a href="/posts/tag/<%=tag.id%>"><%= tag.name %></a>
+      <% end %>
+    </p>
   <% end %>
 <% end %>
