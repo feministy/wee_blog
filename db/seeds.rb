@@ -12,5 +12,5 @@ tags = Tag.all
 posts = Post.all
 
 300.times do
-  Tagcloud.create(post_id: posts.sample, tag_id: tags.sample)
+  Tagcloud.create(post_id: posts.sample.id, tag_id: tags.sample.id)
 end   
