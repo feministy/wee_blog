@@ -23,9 +23,9 @@ get '/user/:id' do
 end 
 
 post '/login' do 
-  # email = params[:login][:email]
-  # password = params[:login][:password]
-  @user = User.authenticate(params[:login])
+  email = params[:login][:email]
+  password = params[:login][:password]
+  @user = User.authenticate(email, password)
   if @user
     session[:user_id] = @user.id
     redirect '/user/' + id
