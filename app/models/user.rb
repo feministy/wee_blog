@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :email, :message => "You're already signed up."
   validates_presence_of :email, :message => "Email required."
   validates_presence_of :name, :message => "Name required."
-  validates_presence_of :password, :message => "Password required."
+  validates_presence_of :password_hash, :message => "Password required."
 
   def password
     @password ||= Password.new(password_hash)

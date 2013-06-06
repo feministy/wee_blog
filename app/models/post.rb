@@ -1,6 +1,6 @@
 class Post < ActiveRecord::Base
   belongs_to :user
-  has_many :tagclouds
+  has_many :tagclouds, :dependent => :destroy
   has_many :tags, :through => :tagclouds
   validates :content, :presence => true
   validates :title, :presence => true
