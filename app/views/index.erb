@@ -3,7 +3,7 @@
     <h2><a href="/posts/<%=post.id%>"><%= post.title %></a></h2>
   
     <p><%= post.content %></p>
-    <p class="edit"><a href="/posts/<%=post.id%>/edit"><i class="icon-edit"></i></a></p>
+    <p class="edit"><a href="/posts/<%=post.id%>/edit"><i class="icon-edit"></i></a> <a href="/posts/<%=post.id%>/delete"><i class="icon-trash"></i></a></p>
     
     <p class="tags">tags:
       <% post.tags.all.each do |tag| %>

@@ -13,6 +13,12 @@ get '/posts/:id/edit' do
   erb :edit
 end 
 
+get '/posts/:id/delete' do
+  id = params[:id]
+  @post = Post.find(id)
+  erb :delete
+end 
+
 get '/posts/:id' do
   id = params[:id]
   @post = Post.find(id)
@@ -36,6 +42,12 @@ post '/posts/:id/edit' do
     else 
       erb :error
     end 
+end 
+
+post '/posts/:id/delete' do
+  id = params[:id]
+  Post.destroy(id)
+  redirect '/'
 end 
 
 not_found do
