@@ -1,3 +1,8 @@
+get '/posts/all' do
+  @posts = Post.all
+  erb :posts
+end 
+
 get '/posts/new' do
   erb :new
 end 
