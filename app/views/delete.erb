@@ -1,4 +1,5 @@
-<% if @current_user.id == @post.user_id %>
+<% if current_user.id == @post.user_id %>
+
 <h2>Are you sure you want to delete that?</h2>
 
 <p><i class="icon-quote-left icon-large"></i> <%= @post.title %> <i class="icon-quote-right icon-large"></i> will be gone forever.</p>
@@ -9,6 +10,7 @@
     <input type="hidden" name="delete" value="<%= @post.id %>">
     <a href="javascript:document.deletepost.submit()"><i class="icon-trash icon-4x"></i></a>
 </form>
+
 
 <% else %>
 <h2>Whoops!</h2>

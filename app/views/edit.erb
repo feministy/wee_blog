@@ -1,4 +1,5 @@
-<% if @current_user.id == @post.user_id %>
+<% if current_user.id == @post.user_id %>
+
 <h2>Edit post</h2>
 <p>Fix your typos.</p>
 <form action="/posts/<%=@post.id%>/edit" method="post">
