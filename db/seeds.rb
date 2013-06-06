@@ -1,7 +1,7 @@
 require 'faker'
 
 100.times do
-  Post.create(title: Faker::Lorem.words(4).join(" "), content: Faker::Lorem.paragraphs(3))
+  Post.create(title: Faker::Lorem.words(4).join(" "), content: Faker::Lorem.paragraphs(3).join("<br><br>"))
 end
 
 20.times do
