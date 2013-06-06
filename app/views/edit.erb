@@ -27,6 +27,7 @@
 <p><input type="submit" value="Post"></p>
 
 <input type="hidden" value="post[<%=@post.id%>]">
+<input type="hidden" name="post[user_id]" value="<%=@current_user.id%>">
 </form>
 
 <% else %>
