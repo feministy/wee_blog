@@ -32,7 +32,7 @@ post '/posts/:id/edit' do
   id = params[:id]
   @post = Post.find(id)
     if @post.update_attributes(params[:post])
-      redirect '/posts/:id'
+      redirect '/posts/' + id
     else 
       erb :error
     end 
