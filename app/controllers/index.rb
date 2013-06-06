@@ -6,5 +6,5 @@ end
 get '/posts/:id' do
   id = params[:id]
   @post = Post.find(id)
-  erb :single_post
+  erb :post
 end 
