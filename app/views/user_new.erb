@@ -1,0 +1,23 @@
+<h2>Sign up</h2>
+
+<form action="/user/new" method="post">
+  <label for="name">
+    <h3>Name</h3>
+  </label>
+
+  <input type="text" id="name" name="new_user[name]" placeholder="Jane" size="70" max="255" autofocus>
+
+  <label for="email">
+    <h3>Email</h3>
+  </label>
+
+  <input type="text" id="email" name="new_user[email]" placeholder="you@email.com" size="70" max="255">
+
+  <label for="password">
+    <h3>Password</h3>
+  </label>
+
+  <input type="password" id="password" name="new_user[password]" placeholder="********" size="70">
+
+  <p><input type="submit" id="submit" value="Login"></p>
+</form>
