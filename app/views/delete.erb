@@ -1,4 +1,4 @@
-<% if current_user.id == @post.user_id %>
+<% if logged_in? && current_user.id == @post.user_id %>
 
 <h2>Are you sure you want to delete that?</h2>
 
