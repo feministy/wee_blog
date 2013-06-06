@@ -1,6 +1,6 @@
 get '/posts/all' do
   @posts = Post.all
-  erb :posts
+  erb :posts_all
 end 
 
 get '/posts/new' do
