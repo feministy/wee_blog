@@ -2,6 +2,7 @@
 <p>Fix your typos.</p>
 <form action="/posts/<%=@post.id%>/edit" method="post">
 <%= erb :form, :layout => false %>
+<input type="hidden" value="post[<%=@post.id%>]">
 </form>
 
 <p>&nbsp;</p>
