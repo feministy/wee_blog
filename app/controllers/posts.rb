@@ -4,7 +4,7 @@ get '/posts/all' do
 end 
 
 get '/posts/new' do
-  erb :new
+  erb :new, :layout => false
 end 
 
 get '/posts/:id/edit' do

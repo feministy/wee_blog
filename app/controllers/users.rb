@@ -1,9 +1,9 @@
 get '/login' do 
-  erb :login
+  erb :login, :layout => false
 end 
 
 get '/user/new' do
-  erb :user_new
+  erb :user_new, :layout => false
 end
 
 get '/logout' do
