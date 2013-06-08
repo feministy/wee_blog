@@ -13,7 +13,7 @@ gem 'thin'
 gem 'activesupport'
 gem 'activerecord'
 gem 'bcrypt-ruby'
-gem 'will_paginate', '~> 3.0.0'
+# gem 'will_paginate', '~> 3.0.0'
 
 gem 'rake'
 
