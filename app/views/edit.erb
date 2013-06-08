@@ -1,9 +1,9 @@
-<% if logged_in? && current_user.id == @post.user_id %>
+<% if logged_in? && current_user.id == @user_id %>
 
 <h2>Edit post</h2>
 <p>Fix your typos.</p>
 
-<form action="/posts/<%=@post.id%>/edit" method="post">
+<form action="/posts/<%=@id%>/edit" method="post">
   <label for="title">
     <h3>Title</h3>
     <p>Keep it short, keep it simple.</p>
@@ -16,8 +16,7 @@
     <p>Separate paragraphs with two line breaks (<code>&lt;br&gt;&lt;br&gt;</code>).</p>
   </label>
   
-  <textarea id="content" name="post[content]" rows="6" cols="70">
-    <%=@content%>
+  <textarea id="content" name="post[content]" rows="6" cols="70"><%=@content%>
   </textarea>
   
   <label for="tags">
@@ -25,13 +24,13 @@
     <p>Separate tags with commas, like so: <code>tag1, tag2, tag3</code>.</p>
   </label>
   
-  <input type="text" id="tags" name="post[tag_names]" size="70" value="<%=  pretty_form_tags%>">
+  <input type="text" id="tags" name="post[tag_names]" size="70" value="<%=pretty_form_tags%>">
   
   <p>
     <input type="submit" value="Post">
   </p>
   
-  <input type="hidden" value="post[<%=@post.id%>]">
+  <input type="hidden" value="post[<%=@id%>]">
   <input type="hidden" name="post[user_id]" value="<%=@current_user.id%>">
 </form>
   

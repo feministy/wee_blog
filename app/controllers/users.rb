@@ -12,32 +12,28 @@ get '/logout' do
 end
 
 get '/user/all' do
-  @all_users = User.all
+  all_users
   erb :user_all
 end 
 
 get '/user/:id' do
-  @user = User.find(params[:id])
-  @all_posts = Post.find_all_by_user_id(@user.id)
+  find_user
+  find_users_posts
   erb :user_profile
 end 
 
-post '/login' do 
-  email = params[:login][:email]
-  password = params[:login][:password]
-  @user = User.authenticate(email, password)
+post '/login' do
+  authenticate_login
   if @user
-    session[:user_id] = @user.id
     redirect '/user/' + @user.id.to_s
   else 
     redirect '/'
-  end 
+  end
 end 
 
 post '/user/new' do
-  @user = User.new(params[:new_user])
+  create_user
   if @user.save
-    session[:user_id] = @user.id
     redirect '/user/' + @user.id.to_s
   else
     redirect '/'
