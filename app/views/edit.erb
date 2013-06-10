@@ -24,7 +24,7 @@
     <p>Separate tags with commas, like so: <code>tag1, tag2, tag3</code>.</p>
   </label>
   
-  <input type="text" id="tags" name="post[tag_names]" size="70" value="<%=pretty_form_tags%>">
+  <input type="text" id="tags" name="post[tag_names]" size="70" value="<%=pretty_form_tags(@tags)%>">
   
   <p>
     <input type="submit" value="Post">

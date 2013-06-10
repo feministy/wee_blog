@@ -1,0 +1,3 @@
+* Move posts_all, post into partials
+* Use locals (:locals => {:post = @post})
+* Clean up helper methods
