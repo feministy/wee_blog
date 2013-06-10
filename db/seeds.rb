@@ -1,11 +1,12 @@
 require 'faker'
 
+# Have to remove "before_save" from post model to seed
+
 User.create(name: "Liz", email: "liz@liz.com", password_hash: "liz")
 User.create(name: "Joe", email: "joe@joe.com", password_hash: "joe")
 User.create(name: "Jessica", email: "jessica@jessica.com", password_hash: "jessica")
 User.create(name: "Lemon", email: "lemon@lemon.com", password_hash: "lemon")
 User.create(name: "Colin", email: "colin@colin.com", password_hash: "colin")
-
 
 
 100.times do
