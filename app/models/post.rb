@@ -4,20 +4,20 @@ class Post < ActiveRecord::Base
   has_many :tags, :through => :tagclouds
   validates_presence_of :content, :title, :user_id
 
-  before_save :tag_it
+  def user_name
+    self.user.name
+  end 
 
-  def tag_names
-    @tag_names
-  end
-
-  def tag_names=(tag_names)
-    @tag_names = tag_names
-  end
+  def tag_names=(tags)
+    array = tags.split(',')
+    update_tag_ids_from(array)
+  end 
 
   private
-  def tag_it
-    tags = @tag_names.split(',')
-    all_tags = tags.map { |tag| Tag.find_or_create_by_name(tag) }
-    self.tag_ids = all_tags.map(&:id)
-  end
+  def update_tag_ids_from(array)
+    self.tag_ids = array.inject([]) do |a, tagstr| 
+      a << Tag.find_or_create_by_name(tagstr).id
+      a
+    end 
+  end 
 end

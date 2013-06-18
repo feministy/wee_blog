@@ -8,6 +8,7 @@ get '/posts/new' do
 end 
 
 get '/posts/:id/edit' do
+  @post = Post.find(params[:id])
   find_post_by_id(params[:id])
   erb :edit
 end 

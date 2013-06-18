@@ -9,7 +9,7 @@ def find_post_by_id(id)
   @content = @post.content
   @tags = @post.tags.all
   @user_id = @post.user_id
-  @user_name = @post.user.name
+  @user_name = @post.user_name
 end 
 
 def create_post
@@ -19,3 +19,4 @@ end
 def delete_post(id)
   Post.destroy(id)
 end 
+
